@@ -12,7 +12,7 @@
             margin-bottom: 40px;
         }
     </style>
-    <body> 
+    <body>
         <!-- As a heading -->
     <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
@@ -40,7 +40,6 @@
         </form>
             <div class="text-end">
                 <a href="home.php" type="button" class="btn btn-outline-success">Login</a>
-                <button type="button" class="btn btn-outline-primary">Register</button>
             </div>
         </div>
         </div>

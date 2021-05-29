@@ -12,7 +12,7 @@
             margin-bottom: 40px;
         }
     </style>
-    <body> 
+    <body>
     <!-- As a heading -->
     <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
@@ -29,7 +29,41 @@
                         Table Lists
                     </div>
                     <div class="card-body">
-                    <button type="button" class="btn btn-outline-primary float-end">Add QR Code</button>
+                    <button type="button" class="btn btn-outline-primary float-end" data-bs-toggle="modal" data-bs-target="#addModal">Add QR Code</button>
+
+                    <div class="modal" tabindex="-1" id="addModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Login</h5>
+                        </div>
+                        <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">QR Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="code" class="form-label">QR code</label>
+                                <input type="file" class="custom-file-input" name="qr" id="qr"  required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="date" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="date">
+                            </div>
+                            <div class="mb-3">
+                                <label for="addBy" class="form-label">Added By</label>
+                                <input type="text" class="form-control" id="addBy">
+                            </div>
+                        </form>
+                            <div class="text-end">
+                                <input type="submit" name="submit" class="btn btn-primary">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
                     <br />
                         <table class="table">
                         <thead>
@@ -38,6 +72,7 @@
                             <th scope="col">First</th>
                             <th scope="col">Last</th>
                             <th scope="col">Handle</th>
+                            <th >Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,6 +81,10 @@
                             <td>Mark</td>
                             <td>Otto</td>
                             <td>@mdo</td>
+                            <td>
+                              <a class='btn btn-sm btn-success'>Edit</a>
+                              <a class='btn btn-sm btn-danger'>Delete</a>
+                            </td>
                             </tr>
                         </tbody>
                         </table>
